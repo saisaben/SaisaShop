@@ -1,0 +1,31 @@
+[
+  {
+    "id":1,
+    "name":"Löwe 1",  
+    "prise":150400,  
+    "image": "/img/1.png", 
+    "des":"WunderBar Löwe zu verkaufen von Afrika Nr1"  
+  },
+  {
+    "id":2,
+    "name":"Löwe 2",  
+    "prise":280000,  
+    "image": "/img/2.png", 
+    "des":"WunderBar Löwe zu verkaufen von Afrika Nr2"  
+  },
+  {
+    "id":3,
+    "name":"Löwe 3",  
+    "prise":340000,  
+    "image": "/img/3.png", 
+    "des":"WunderBar Löwe zu verkaufen von Afrika Nr3"  
+  },
+  {
+    "id":4,
+    "name":"Löwe 4",  
+    "prise":405000,  
+    "image": "/img/4.jpg", 
+    "des":"WunderBar Löwe zu verkaufen von Afrika Nr4"  
+  }
+
+]
