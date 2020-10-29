@@ -5,7 +5,7 @@ import throttle from 'lodash.throttle';
 
 function loadState(){
     try{
-        const state = localStorage.getItem('cart');
+        const state = localStorage.getItem('card');
 
         if(state !== null){
             return JSON.parse(state);
@@ -15,17 +15,17 @@ function loadState(){
     }
 
     return {
-        cart: []
+        card: []
     };
 }
 
 function saveState(state){
     console.log('saveState..')
-    localStorage.setItem('cart', JSON.stringify(state));
+    localStorage.setItem('card', JSON.stringify(state));
 }
 
 const appReducers = combineReducers({
-    cart: cartReduer,
+    card: cartReduer,
 });
 
 const store = createStore(appReducers, loadState(), compose(
