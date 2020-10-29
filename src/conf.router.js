@@ -12,7 +12,7 @@ import {
 import NotFound from './NotFound';
 import Home from './View/Home';
 import Products from './View/Products';
-import EinkaufWagen from './View/EinkaufWagen';
+import Card from './View/EinkaufWagen';
 import App from './App';
 import ProductsInfo from './View/ProductsInfo';
 import CartIcon from './Componet/CartIcon';
@@ -45,8 +45,8 @@ const routes = [
         exact: false, 
         
     },{
-        path: '/EinkaufWagen',
-        component: EinkaufWagen, 
+        path: '/Card',
+        component: Card, 
         exact: true   
     },{
         path: '*',
@@ -67,7 +67,7 @@ const RoutingConfig = (index) => {
 <div className="navbar-nav">
 <Link className="nav-link active" to="/Home" >Home </Link>
 <Link className="nav-link" to="/Products">Products</Link>
-<Link className="nav-link" to="/EinkaufWagen">EinkaufsWagen</Link>
+<Link className="nav-link" to="/Card">EinkaufsWagen</Link>
 
 
 </div>
