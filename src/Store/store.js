@@ -1,6 +1,5 @@
-import {createStore, compose, applyMiddleware, combineReducers } from "redux";
-import thunk from "redux-thunk";
-import cartReduer from "./Reducers";
+import {createStore, combineReducers } from "redux";
+import cardReduer from "./Reducers";
 import throttle from 'lodash.throttle';
 
 function loadState(){
@@ -25,13 +24,12 @@ function saveState(state){
 }
 
 const appReducers = combineReducers({
-    card: cartReduer,
+    card: cardReduer,
 });
 
-const store = createStore(appReducers, loadState(), compose(
-    applyMiddleware(thunk),
+const store = createStore(appReducers, loadState(),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-));
+);
 
 store.subscribe(throttle(() => {
     saveState(store.getState());
