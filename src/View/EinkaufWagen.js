@@ -6,7 +6,7 @@ import  {clearCart} from '../Store/Actions/actions';
 
 
 
-class Cart extends React.Component{
+class Card extends React.Component{
  
   Zahlung = () =>{
     // send the requst to the server
@@ -44,8 +44,8 @@ class Cart extends React.Component{
 const mapStateToProps =(state) => {
   return{
      
-      cartItems: state.cart,
-      total: state.cart.reduce((total, item) => total + item.quantity * item.product.prise, 0 ),
+      cartItems: state.card,
+      total: state.card.reduce((total, item) => total + item.quantity * item.product.prise, 0 ),
 
 
   };
@@ -59,4 +59,4 @@ const mapDispatchToProps =(dispatch) => {
   };
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Cart);
+export default connect(mapStateToProps,mapDispatchToProps)(Card);
