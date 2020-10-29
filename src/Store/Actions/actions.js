@@ -11,17 +11,13 @@ export function addToCart (ProductInfo, quantity){
 }
 
 
-export function createRemoveFromCart (index){
+export function removeFromCart (index){
   return{
     type: REMOVE_FROM_CART,
     index,
   }
 }
-export function removeFromCart (index){
-  return(dispatch) =>{
-    dispatch(createRemoveFromCart(index));
-  };
-}
+
 
 
 export function clearCart (){
