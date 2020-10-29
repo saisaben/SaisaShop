@@ -1,11 +1,12 @@
 import React from 'react';
-import  {connect} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import  {removeFromCart} from '../Store/Actions/actions';
 
 
-function CartItem(props){
+export default function CartItem(props){
    const {item,index}= props;
    const {product}= item;
+   const Dis = useDispatch(()=>removeFromCart(index));
   
 
     return(
@@ -22,7 +23,7 @@ function CartItem(props){
                 Gesamt: {item.quantity * product.prise} €
                 <br/>
                 </p>
-                    <button className="btn btn-danger" onClick={props.removeFromCart(index)} >
+                    <button className="btn btn-danger" onClick={Dis} >
                         <i className='fa fa-trash' >   
                         </i> 
                         Lösche
@@ -38,5 +39,3 @@ function CartItem(props){
 
 
 }
-
-  export default connect(null, {removeFromCart})(CartItem);
